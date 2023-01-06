@@ -5,6 +5,11 @@
 	},
 	"rules": {
 		"react/jsx-props-no-spreading": "off",
-		"import/first": "error"
+		"import/first": "error",
+		"react/function-component-definition": "off",
+		"arrow-body-style": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"import/prefer-default-export": "off",
+		"jsx-a11y/anchor-is-valid": "off"
 	}
 }
