@@ -1,15 +1,37 @@
-.container {
-	color: red;
+.about {
+	background-color: red;
+	color: white;
+	text-align: center;
+	height: 100vh;
+}
 
-	.div {
-		background-color: blue;
+.about h3 {
+	font-size: 25px;
+}
 
-		a {
-			color: red;
-		}
+.about h2 {
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: normal;
+}
 
-		.paragrafo {
-			color: red;
-		}
-	}
+.about p {
+	line-height: 1.5;
+	width: 70%;
+	text-align: center;
+	margin-left: 15%;
+}
+
+.cards {
+	width: 32%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.cards p {
+	background-color: white;
+	color: black;
+	margin: 0;
+	padding: 15px;
+	text-align: center;
 }
