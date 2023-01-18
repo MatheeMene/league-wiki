@@ -9,7 +9,14 @@
 		"react/function-component-definition": "off",
 		"arrow-body-style": "off",
 		"@typescript-eslint/no-unused-vars": "warn",
+		"@typescript-eslint/indent": ["warn", 4],
 		"import/prefer-default-export": "off",
-		"jsx-a11y/anchor-is-valid": "off"
+		"jsx-a11y/anchor-is-valid": "off",
+		"no-unused-vars": "off",
+		"no-console": "off",
+		"react/jsx-indent": ["warn", 4],
+		"react/self-closing-comp": "off",
+		"global-require": "off",
+		"react/jsx-fragments": "off"
 	}
 }

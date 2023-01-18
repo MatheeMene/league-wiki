@@ -1,0 +1,69 @@
+@import "/src/general/_variables";
+
+.home__container {
+	width: 100%;
+	height: $fullscreen-without-header;
+	display: flex;
+	flex-direction: row;
+
+	.home__image {
+		width: 51%;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.home__content {
+		width: 49%;
+		display: flex;
+		align-items: center;
+		background-color: rgba(207, 96, 199, 0.8);
+
+		div {
+			margin-left: 30px;
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			height: 30%;
+			justify-content: space-around;
+
+			h1 {
+				color: #fff;
+				max-width: 420px;
+				text-transform: uppercase;
+			}
+
+			p {
+				color: $primeiry-color;
+				max-width: 350px;
+				font-weight: 600;
+				font-size: 18px;
+			}
+
+			span {
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 18px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				cursor: pointer;
+				margin-top: 20px;
+				text-shadow: 1px 1px 4px #000000;
+
+				@keyframes infinity-float {
+					0%,
+					100% {
+						transform: translatey(0);
+					}
+					50% {
+						transform: translatey(-10px);
+					}
+				}
+				animation: infinity-float 2s ease-in-out infinite;
+			}
+		}
+	}
+}
