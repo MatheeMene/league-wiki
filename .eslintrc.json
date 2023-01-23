@@ -17,6 +17,10 @@
 		"react/jsx-indent": ["warn", 4],
 		"react/self-closing-comp": "off",
 		"global-require": "off",
-		"react/jsx-fragments": "off"
+		"react/jsx-fragments": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/interactive-supports-focus": "off",
+		"quote-props": "off",
+		"react/jsx-indent-props": ["warn", 4]
 	}
 }
