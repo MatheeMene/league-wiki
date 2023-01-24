@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { observer } from 'mobx-react-lite';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
+import { useStores } from '../../hooks/useStores';
 
 import './styles.scss';
 
@@ -30,19 +32,24 @@ const Hamburguer: React.FC<HamburguerProps> = ({ hamburguerClick }) => {
     return (
         <div className={clsx({ 'hamburguer__list': true, 'hidden_hamburguer__list': !hamburguerClick })}>
             <ul>
-                <li>Sobre nós</li>
                 <li>Campeões</li>
                 <li>Itens</li>
                 <li>Provisório</li>
+                <li>Sobre nós</li>
             </ul>
         </div>
     );
 };
 
-export const Header: React.FC = () => {
+export const Header: React.FC = observer(() => {
     const [hamburguerClick, setHamburguerClick] = useState<boolean>(false);
 
-    const handleHamburguerClick: VoidFunction = () => setHamburguerClick((prevState) => !prevState);
+    const { UIStore: { setHideButtonBelowModal, hideButtonBelowModal } } = useStores();
+
+    const handleHamburguerClick: VoidFunction = () => {
+        setHamburguerClick(!hamburguerClick);
+        setHideButtonBelowModal(!hideButtonBelowModal);
+    };
 
     return (
         <header className="header">
@@ -59,4 +66,4 @@ export const Header: React.FC = () => {
             <Logo />
         </header>
     );
-};
+});

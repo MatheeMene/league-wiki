@@ -50,6 +50,10 @@
 				font-size: 18px;
 			}
 
+			.disable__animation {
+				animation: none !important;
+			}
+
 			span {
 				color: #fff;
 				text-transform: uppercase;

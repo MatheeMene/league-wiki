@@ -1,7 +1,14 @@
 import React from 'react';
+import clsx from 'clsx';
+import { observer } from 'mobx-react-lite';
+
+import { useStores } from '../../hooks/useStores';
+
 import './styles.scss';
 
-export const Home: React.FC = () => {
+export const Home: React.FC = observer(() => {
+    const { UIStore: { hideButtonBelowModal } } = useStores();
+
     return (
         <main className="home__container">
             <div className="home__image">
@@ -13,14 +20,14 @@ export const Home: React.FC = () => {
                     <p>
                         Conheça um pouco de cada campeão clicando no botão abaixo
                     </p>
-                    <span>
+                    <span className={clsx(hideButtonBelowModal && 'disable__animation')}>
                         ⬇ Conheça alguns campeões ⬇
                     </span>
                 </div>
             </div>
         </main>
     );
-};
+});
 
 // Limitar itens por scroll
 // Fazer carregamento dos cards para cada limite atingido no scroll
