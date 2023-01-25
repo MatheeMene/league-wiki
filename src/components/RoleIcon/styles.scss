@@ -1,0 +1,11 @@
+.role__container {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .champion__role {
+        width: 45px;
+        background-color: white;
+        border-radius: 10px;
+    }
+}

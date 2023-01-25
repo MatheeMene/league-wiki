@@ -1,0 +1,33 @@
+@import "/src/general/_variables";
+
+.champion__banner__container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .champion__banner_image {
+            width: 300px;
+            margin-top: 120px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 9px -2px rgb(0 0 0 / 75%);
+        }
+
+        .champion__name {
+            color: #fff;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .champion__title {
+            margin: 10px 0 30px 0;
+            text-align: center;
+            color: $primeiry-color;
+        }
+    }
+}
