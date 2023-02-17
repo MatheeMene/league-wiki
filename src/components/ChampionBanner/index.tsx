@@ -24,7 +24,7 @@ export const ChampionBanner: React.FC<ChampionBannerProps> = ({
                 />
                 <h1 className="champion__name">{championName}</h1>
                 <h3 className="champion__title">{championTitle}</h3>
-                <RoleIcon firstRole={championTags[0]} secondRole={championTags[1]} />
+                <RoleIcon championTags={championTags} />
             </div>
         </div>
     );

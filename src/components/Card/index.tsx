@@ -6,12 +6,11 @@ import { RoleIcon } from '../RoleIcon';
 interface CardProps {
     championName: string;
     championDescription: string;
-    firstRole: string;
-    secondRole?: string;
+    championTags: string[];
 }
 
 export const Card: React.FC<CardProps> = ({
-    championName, championDescription, firstRole, secondRole,
+    championName, championDescription, championTags,
 }) => {
     return (
         <div className="card__container">
@@ -20,7 +19,7 @@ export const Card: React.FC<CardProps> = ({
             </div>
             <h1 className="card__title">{championName}</h1>
             <span>{championDescription}</span>
-            <RoleIcon firstRole={firstRole} secondRole={secondRole} />
+            <RoleIcon championTags={championTags} />
             <button className="card__button" type="button">Ver mais</button>
         </div>
     );

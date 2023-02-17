@@ -3,16 +3,17 @@ import React, { useEffect, useState } from 'react';
 import { Card } from '../../components';
 import { getLOLChampionsData } from '../../services/api/Champions';
 
+import { ChampionItem } from '../../types';
+
 import './styles.scss';
 
 export const Champions: React.FC = () => {
-    const [championsData, setChampionsData] = useState();
-    console.log(getLOLChampionsData());
+    const [championsData, setChampionsData] = useState<ChampionItem[]>();
 
     useEffect(() => {
         const fetchChampionsData = async () => {
             const data = await getLOLChampionsData();
-            setChampionsData(data.data);
+            setChampionsData(data);
         };
 
         fetchChampionsData();
@@ -20,7 +21,16 @@ export const Champions: React.FC = () => {
 
     return (
         <div className="champions__container">
-            <Card championName="aaaaaa" championDescription="aaaaaaaaaaaaaaaa" firstRole="Assassin" />
+            {championsData?.map(championData => {
+                return (
+                    <Card
+                        championName={championData.name}
+                        championDescription={championData.title}
+                        championTags={championData.tags}
+                        key={championData.id}
+                    />
+                );
+            })}
         </div>
     );
 };

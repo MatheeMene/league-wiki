@@ -29,6 +29,7 @@
 		"consistent-return": "off",
 		"import/no-dynamic-require": "off",
 		"react/require-default-props": "off",
-		"max-len": ["warn", 150]
+		"max-len": ["warn", 150],
+		"react/jsx-no-useless-fragment": "off"
 	}
 }
