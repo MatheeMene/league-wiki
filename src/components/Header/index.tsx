@@ -14,9 +14,7 @@ const Logo: React.FC = () => (
     <div className="main">
         <ul className="list__left">
             <li><Link to="/about">Sobre nós</Link></li>
-            <li>
-                Campeões
-            </li>
+            <li><Link to="/champions">Campeões</Link></li>
         </ul>
         <Link to="/" className="logo__wrapper">
             <img className="logo__img" src={require('../../assets/images/logo.png')} alt="logo" />
@@ -32,10 +30,10 @@ const Hamburguer: React.FC<HamburguerProps> = ({ hamburguerClick }) => {
     return (
         <div className={clsx({ 'hamburguer__list': true, 'hidden_hamburguer__list': !hamburguerClick })}>
             <ul>
-                <li>Campeões</li>
-                <li>Itens</li>
-                <li>Provisório</li>
-                <li>Sobre nós</li>
+                <li><Link to="/champions">Campeões</Link></li>
+                <li><Link to="/champions">Items</Link></li>
+                <li><Link to="/champions">Provisório</Link></li>
+                <li><Link to="/about">Sobre nós</Link></li>
             </ul>
         </div>
     );

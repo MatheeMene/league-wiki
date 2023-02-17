@@ -4,5 +4,5 @@ const championsData = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/
 
 export const getLOLChampionsData = async () => {
     const { data } = await axios.get(championsData);
-    console.log(data);
+    return data;
 };
