@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import UIStore from './definition/UIStore';
 
 export class RootStore {
-    UIStore = new UIStore();
+  UIStore = new UIStore();
 }
 
 const StoreList = new RootStore();

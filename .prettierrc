@@ -14,9 +14,9 @@
 	"requirePragma": false,
 	"semi": true,
 	"singleQuote": true,
-	"tabWidth": 4,
 	"trailingComma": "all",
 	"useTabs": false,
 	"vueIndentScriptAndStyle": false,
-	"parser": "typescript"
+	"parser": "typescript",
+	"spaceWidth": 2
 }
